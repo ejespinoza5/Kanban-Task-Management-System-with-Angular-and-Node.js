@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+<h1 class="title has-text-centered mb-5">Editar Tarea</h1>
+<form (ngSubmit)="updateTarea()">
+  <div class="field">
+    <label for="titulo" class="label">Título</label>
+    <div class="control">
+      <input type="text" class="input" id="titulo" name="titulo" [(ngModel)]="tarea.titulo" placeholder="Ingresa el título">
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="descripcion" class="label">Descripción</label>
+    <div class="control">
+      <textarea class="textarea" id="descripcion" name="descripcion" [(ngModel)]="tarea.descripcion" rows="3" placeholder="Ingresa la descripción"></textarea>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="prioridad" class="label">Prioridad</label>
+    <div class="control">
+      <input type="text" class="input" id="prioridad" name="prioridad" [(ngModel)]="tarea.prioridad" placeholder="Ingresa la prioridad">
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="horas" class="label">Horas</label>
+    <div class="control">
+      <input type="number" class="input" id="horas" name="horas" [(ngModel)]="tarea.horas" placeholder="Ingresa las horas">
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="estado" class="label">Estado</label>
+    <div class="control">
+      <div class="select">
+        <select id="estado" name="estado" [(ngModel)]="tarea.estado">
+          <option value="" disabled selected>Selecciona el estado</option>
+          <option value="pendiente">Pendiente</option>
+          <option value="en curso">En curso</option>
+          <option value="hecho">Hecho</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <button type="submit" class="button is-primary" (click)="closeModal()">Actualizar</button>
+    </div>
+  </div>
+</form>

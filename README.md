@@ -1,5 +1,7 @@
 # TableroKanban
 
+# Execute command npm install to install all the dependencies
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
 
 ## Development server
@@ -25,3 +27,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## create database with name kanva in mysql
+create table 
+create table tablero(
+id int auto_increment primary key,
+titulo varchar(50),
+descripcion varchar(50),
+prioridad varchar(50),
+horas int,
+estado varchar(50)
+);
